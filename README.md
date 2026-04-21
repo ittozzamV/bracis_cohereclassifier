@@ -21,7 +21,6 @@ This project implements a text classification pipeline with support for various 
 │   ├── pos_mix.py, pos_tags.py# POS tags manipulation scripts
 │   └── rst_mix.py, rst_tags.py# RST tags manipulation scripts
 ├── figs/                      # Figures and plots generated during experiments
-├── infer.sh                   # Shell script for batch inference
 ├── infer_checkpoints.py       # Script for inference using trained model checkpoints
 ├── translate.py               # Script for automatic dataset translation
 ├── .gitignore                 # Git ignore file
@@ -68,11 +67,7 @@ python classifier.py --dataset_path <path_to_dataset> [options]
 
 #### 2. Inference
 
-To run batch inference using multiple checkpoints:
-```bash
-bash infer.sh
-```
-Or directly:
+You can run inference directly with:
 ```bash
 python infer_checkpoints.py --dataset_path <path_to_processed_dataset> --prefix <checkpoints_prefix>
 ```
@@ -123,7 +118,6 @@ Este projeto implementa um pipeline de classificação de textos com suporte a d
 │   ├── pos_mix.py, pos_tags.py# POS tags manipulation scripts
 │   └── rst_mix.py, rst_tags.py# RST tags manipulation scripts
 ├── figs/                      # Figures and plots generated during experiments
-├── infer.sh                   # Shell script for batch inference
 ├── infer_checkpoints.py       # Script for inference using trained model checkpoints
 ├── translate.py               # Script for automatic dataset translation
 ├── .gitignore                 # Git ignore file
@@ -170,11 +164,7 @@ python classifier.py --dataset_path <caminho_para_dataset> [opções]
 
 #### 2. Inferência
 
-Para rodar inferências em lote usando múltiplos checkpoints:
-```bash
-bash infer.sh
-```
-Ou diretamente:
+Você pode rodar a inferência diretamente por:
 ```bash
 python infer_checkpoints.py --dataset_path <caminho_para_dataset_processado> --prefix <prefixo_dos_checkpoints>
 ```
