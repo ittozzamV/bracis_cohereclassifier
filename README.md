@@ -15,14 +15,11 @@ This project implements a text classification pipeline with support for various 
 ├── classifier.py              # Main script for training classification models
 ├── custom_pipeline.py         # Custom pipeline for classification using HuggingFace Transformers
 ├── data_processor/            # Modules for preprocessing and dataset manipulation
-│   ├── adversarial_filter/    # Scripts for adversarial data filtering
 │   ├── dmrst_parser/          # Discourse parser (RST), includes README and training/inference scripts
 │   ├── ftbr.py                # FakeTrueBr dataset handling
 │   ├── gcdc.py                # GCDC dataset handling
 │   ├── pos_mix.py, pos_tags.py# POS tags manipulation scripts
-│   ├── rst_mix.py, rst_tags.py# RST tags manipulation scripts
-│   ├── translated.py          # Translated datasets handling
-│   └── commonstories.py       # CommonStories dataset handling
+│   └── rst_mix.py, rst_tags.py# RST tags manipulation scripts
 ├── figs/                      # Figures and plots generated during experiments
 ├── infer.sh                   # Shell script for batch inference
 ├── infer_checkpoints.py       # Script for inference using trained model checkpoints
@@ -80,14 +77,6 @@ Or directly:
 python infer_checkpoints.py --dataset_path <path_to_processed_dataset> --prefix <checkpoints_prefix>
 ```
 
-#### 3. Dataset Translation
-
-To translate a CSV file with a "text" column from English to Portuguese:
-```bash
-python translate.py --df <path_to_csv>
-```
-The translated file will be saved with the `_translated.csv` suffix.
-
 ---
 
 ### Preprocessing and Discourse Parsing
@@ -124,23 +113,21 @@ Este projeto implementa um pipeline de classificação de textos com suporte a d
 
 ```
 .
-├── classifier.py              # Script principal para treinamento de modelos de classificação
-├── custom_pipeline.py         # Pipeline customizado para classificação usando HuggingFace Transformers
-├── data_processor/            # Módulos para pré-processamento e manipulação de datasets
-│   ├── adversarial_filter/    # Scripts para filtragem adversarial de dados
-│   ├── dmrst_parser/          # Parser e segmentador discursivo (RST), inclui README e scripts de treinamento/inferência
-│   ├── ftbr.py                # Manipulação do dataset FakeTrueBr
-│   ├── gcdc.py                # Manipulação do dataset GCDC
-│   ├── pos_mix.py, pos_tags.py# Scripts para manipulação de tags POS
-│   ├── rst_mix.py, rst_tags.py# Scripts para manipulação de tags RST
-│   ├── translated.py          # Manipulação de datasets traduzidos
-│   └── commonstories.py       # Manipulação do dataset CommonStories
-├── figs/                      # Figuras e gráficos gerados durante experimentos
-├── infer.sh                   # Script shell para rodar inferências em lote
-├── infer_checkpoints.py       # Script para inferência usando checkpoints de modelos treinados
-├── translate.py               # Script para tradução automática de datasets
-├── .gitignore                 # Arquivos e pastas ignorados pelo git
-└── README.md                  # Este arquivo
+
+├── classifier.py              # Main script for training classification models
+├── custom_pipeline.py         # Custom pipeline for classification using HuggingFace Transformers
+├── data_processor/            # Modules for preprocessing and dataset manipulation
+│   ├── dmrst_parser/          # Discourse parser (RST), includes README and training/inference scripts
+│   ├── ftbr.py                # FakeTrueBr dataset handling
+│   ├── gcdc.py                # GCDC dataset handling
+│   ├── pos_mix.py, pos_tags.py# POS tags manipulation scripts
+│   └── rst_mix.py, rst_tags.py# RST tags manipulation scripts
+├── figs/                      # Figures and plots generated during experiments
+├── infer.sh                   # Shell script for batch inference
+├── infer_checkpoints.py       # Script for inference using trained model checkpoints
+├── translate.py               # Script for automatic dataset translation
+├── .gitignore                 # Git ignore file
+└── README.md                  # This file
 ```
 
 ---
@@ -154,7 +141,7 @@ Este projeto implementa um pipeline de classificação de textos com suporte a d
    ```
 2. Instale as dependências (recomenda-se uso de ambiente virtual):
    ```bash
-   pip install -r requirements.txt
+   conda install --file environment.yaml
    ```
    > **Obs:** Certifique-se de instalar também as dependências específicas dos módulos de parsing (ver `data_processor/dmrst_parser/README.md`).
 
@@ -191,14 +178,6 @@ Ou diretamente:
 ```bash
 python infer_checkpoints.py --dataset_path <caminho_para_dataset_processado> --prefix <prefixo_dos_checkpoints>
 ```
-
-#### 3. Tradução de Datasets
-
-Para traduzir um arquivo CSV com uma coluna "text" do inglês para o português:
-```bash
-python translate.py --df <caminho_para_csv>
-```
-O arquivo traduzido será salvo com o sufixo `_translated.csv`.
 
 ---
 
