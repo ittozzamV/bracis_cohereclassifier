@@ -4,7 +4,7 @@
 
 ### Description
 
-This project implements a text classification pipeline with support for various linguistic preprocessing types (POS, RST, etc.), using Transformer-based models. It includes scripts for training, inference, dataset translation, and data processing, as well as integration with discourse parsing frameworks.
+This project implements a text classification pipeline with support for various linguistic preprocessing types (POS, RST), using Transformer-based models. It includes scripts for training, inference, and data processing, as well as integration with discourse parsing frameworks.
 
 ---
 
@@ -100,7 +100,7 @@ The `figs/` directory contains plots and visualizations generated during experim
 
 ### Descrição
 
-Este projeto implementa um pipeline de classificação de textos com suporte a diferentes tipos de pré-processamento linguístico (POS, RST, etc.), utilizando modelos baseados em Transformers. Inclui scripts para treinamento, inferência, tradução de datasets e processamento de dados, além de integrações com frameworks de parsing discursivo.
+Este projeto implementa um pipeline de classificação de textos com suporte a diferentes tipos de pré-processamento linguístico (POS, RST), utilizando modelos baseados em Transformers. Inclui scripts para treinamento, inferência e processamento de dados, além de integrações com frameworks de parsing discursivo.
 
 ---
 
